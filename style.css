@@ -20,6 +20,18 @@ body {
     box-sizing: border-box;
 }
 
+body {
+    background-image: url('imagen/coraline1.jpg');
+    background-size: cover;
+    /* La imagen cubre todo el espacio */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* No repite la imagen */
+    background-attachment: fixed;
+    /* Fondo fijo al hacer scroll */
+}
+
 /* Header */
 .custom-header {
     background-color: var(--primary-color) !important;
