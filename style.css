@@ -1,3 +1,251 @@
+/* ============================================
+   ESTILOS PRINCIPALES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ============================================================ */
+/* NOTA FIJA - MÁS ANCHA Y MEJOR VISIBLE (VERSIÓN MEJORADA)    */
+/* ============================================================ */
+.fixed-note {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px 24px;
+    max-width: 90%;
+    width: auto;
+    min-width: 350px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Para que el texto dentro de la nota sea seleccionable */
+.fixed-note * {
+    pointer-events: auto;
+}
+
+/* Cabecera de la nota */
+.fixed-note .note-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    padding-bottom: 4px;
+}
+
+.fixed-note .note-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.fixed-note .note-label {
+    font-weight: 700;
+    color: #ffd700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+/* Cuerpo de la nota */
+.fixed-note .note-body {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #f0f0f0;
+    line-height: 1.5;
+    padding: 4px 0 2px 0;
+    text-align: center;
+}
+
+.fixed-note .note-body .highlight {
+    color: #ffd700;
+    font-weight: 600;
+    background: rgba(255, 215, 0, 0.12);
+    padding: 1px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.fixed-note .note-body .highlight-name {
+    color: #ffd700;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    background: rgba(255, 215, 0, 0.08);
+    padding: 1px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* Pie de la nota */
+.fixed-note .note-footer {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fixed-note .note-date {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+/* Animación sutil al cargar */
+@keyframes slideDownNote {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.fixed-note {
+    animation: slideDownNote 0.4s ease-out;
+}
+
+/* Responsive para la nota fija mejorada */
+@media (max-width: 768px) {
+    .fixed-note {
+        top: 85px;
+        padding: 8px 16px;
+        max-width: 92%;
+        min-width: 280px;
+        border-radius: 8px;
+    }
+    
+    .fixed-note .note-label {
+        font-size: 0.8rem;
+    }
+    
+    .fixed-note .note-body {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .fixed-note .note-body .highlight-name {
+        font-size: 0.85rem;
+    }
+    
+    .fixed-note .note-icon {
+        font-size: 0.9rem;
+    }
+    
+    .fixed-note .note-date {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fixed-note {
+        top: 75px;
+        padding: 6px 12px;
+        max-width: 95%;
+        min-width: 200px;
+        border-radius: 6px;
+        border-width: 1px;
+    }
+    
+    .fixed-note .note-header {
+        gap: 4px;
+        margin-bottom: 2px;
+        padding-bottom: 3px;
+    }
+    
+    .fixed-note .note-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .fixed-note .note-body {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        padding: 2px 0;
+    }
+    
+    .fixed-note .note-body .highlight-name {
+        font-size: 0.75rem;
+    }
+    
+    .fixed-note .note-body .highlight {
+        padding: 0 4px;
+    }
+    
+    .fixed-note .note-icon {
+        font-size: 0.8rem;
+    }
+    
+    .fixed-note .note-footer {
+        margin-top: 2px;
+        padding-top: 2px;
+    }
+    
+    .fixed-note .note-date {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .fixed-note {
+        top: 65px;
+        padding: 5px 10px;
+        min-width: 160px;
+        border-radius: 5px;
+    }
+    
+    .fixed-note .note-body {
+        font-size: 0.6rem;
+    }
+    
+    .fixed-note .note-label {
+        font-size: 0.6rem;
+    }
+    
+    .fixed-note .note-body .highlight-name {
+        font-size: 0.65rem;
+    }
+}
+
+/* ============================================================ */
+/* FIN NOTA FIJA                                                */
+/* ============================================================ */
+
 /* Estilos base */
 :root {
     --primary-color: #3B1C32;
@@ -7,29 +255,21 @@
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* AJUSTE DE MARGEN SUPERIOR E INFERIOR PARA EVITAR TRASLAPE CON HEADER, NOTA Y FOOTER */
 body {
     font-family: 'Oswald', Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    padding-top: 80px;
-    /* Espacio para el header fijo */
-    padding-bottom: 60px;
-    /* Espacio para el footer fijo */
+    padding-top: 250px; /* Aumentado para dar espacio suficiente a la nota */
+    padding-bottom: 100px; /* MODIFICADO: Aumentado a 100px para crear el espacio entre la galería y el footer */
     background: radial-gradient(ellipse, blue, black);
     min-height: 100vh;
     box-sizing: border-box;
-}
-
-body {
-    background-image: url('imagen/coraline1.jpg');
+    background-image: url('imagen/shinobu.jpg');
     background-size: cover;
-    /* La imagen cubre todo el espacio */
     background-position: center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
-    /* No repite la imagen */
     background-attachment: fixed;
-    /* Fondo fijo al hacer scroll */
 }
 
 /* Header */
@@ -87,13 +327,19 @@ body {
     }
 
     body {
-        padding-top: 70px;
+        padding-top: 180px; /* Ajustado para móviles */
+        padding-bottom: 80px; /* MODIFICADO: Espacio inferior ajustado para móviles */
     }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
     .header-title {
         font-size: 1rem !important;
+    }
+    
+    body {
+        padding-top: 220px; /* Ajustado para tablets pequeñas */
+        padding-bottom: 90px; /* MODIFICADO: Espacio inferior ajustado para tablets */
     }
 }
 
@@ -118,56 +364,72 @@ h1 {
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 30px;
+    background: transparent;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: 0 auto 40px auto; /* MODIFICADO: Se agrega margin-bottom de 40px */
 }
 
 .imagen-container {
-    background-color: white;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 4/3;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .imagen-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .imagen {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     flex-grow: 1;
 }
 
 .pie-imagen {
     padding: 15px;
     text-align: center;
-    background: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+}
+
+.pie-imagen a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.pie-imagen a:hover {
+    color: #ffd700;
 }
 
 .pie-imagen h3 {
     margin: 0 0 5px 0;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-size: 1.1rem;
 }
 
 .pie-imagen p {
     margin: 0;
-    color: #666;
+    color: #ddd;
     font-size: 0.9rem;
 }
 
-/* Modal */
+/* ============================================================ */
+/* MODALES - CON Z-INDEX MÁS ALTO Y POSICIÓN MEJORADA          */
+/* ============================================================ */
 .modalmask {
     position: fixed;
     font-family: Arial, sans-serif;
@@ -175,15 +437,15 @@ h1 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 999999;
     opacity: 0;
     transition: opacity 400ms ease-in;
     pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 30px 15px;
     box-sizing: border-box;
 }
 
@@ -194,38 +456,39 @@ h1 {
 
 .modalbox {
     width: 90%;
-    max-width: 800px;
+    max-width: 900px;
     position: relative;
     padding: 25px;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 500ms ease-in;
-    margin: 20px;
+    margin: 30px auto;
     box-sizing: border-box;
     transition: transform 0.3s ease;
     transform-origin: center center;
     cursor: zoom-in;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow: auto;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
 }
 
 /* Movimientos modal */
 .movedown {
-    margin: 0;
-    transform: translateY(-20px);
+    margin: 30px auto;
+    transform: translateY(-10px);
 }
 
 .rotate {
-    margin: 0;
+    margin: 30px auto;
     transform: scale(-5, -5);
 }
 
 .resize {
-    margin: 0;
+    margin: 30px auto;
     width: 90%;
     max-width: 1000px;
     height: auto;
-    max-height: 90vh;
+    max-height: 85vh;
 }
 
 .modalmask:target .movedown {
@@ -240,7 +503,7 @@ h1 {
     width: 90%;
     max-width: 1000px;
     height: auto;
-    max-height: 90vh;
+    max-height: 85vh;
 }
 
 /* Botón cerrar */
@@ -249,32 +512,31 @@ h1 {
     color: #FFFFFF;
     line-height: 30px;
     position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 30px;
-    height: 30px;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    height: 32px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 1000000;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .close::before {
     content: "×";
-    /* Unicode "×" */
     display: block;
 }
 
-
-
 .close:hover {
     background: #E43636;
-    color: #222;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 .modalbox.resize {
@@ -285,25 +547,347 @@ h1 {
 .modalbox.resize img.imagen {
     width: 100%;
     height: auto;
-    max-height: 90vh;
+    max-height: 83vh;
     object-fit: contain;
     display: block;
 }
 
 /* Zoom */
 .modalbox.zoomed {
-    transform: scale(2);
+    transform: scale(1.8);
     cursor: zoom-out;
-    z-index: 100000;
+    z-index: 1000000;
 }
 
 .modalbox.resize.zoomed {
-    transform: scale(1.8);
+    transform: scale(1.6);
     padding: 0;
 }
 
 .modalbox.resize.zoomed img.imagen {
-    max-height: 85vh;
+    max-height: 80vh;
+}
+
+/* ============================================================ */
+/* GALERÍA MODAL - CON Z-INDEX MÁS ALTO Y MEJOR POSICIÓN      */
+/* ============================================================ */
+.modal-gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.modal-gallery-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-gallery-container {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1100px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    margin: 20px auto;
+}
+
+.modal-gallery-overlay.active .modal-gallery-container {
+    transform: scale(1);
+}
+
+.modal-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-bottom: 1px solid #34495e;
+}
+
+.modal-gallery-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.modal-gallery-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 1000000;
+    position: relative;
+}
+
+.modal-gallery-close:hover {
+    transform: rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-gallery-body {
+    padding: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal de imagen con scroll */
+.modal-main-image-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: auto;
+    background-color: #f5f5f5;
+    height: 65vh;
+    flex-grow: 1;
+    display: flex;
+    border: 1px solid #dee2e6;
+}
+
+.modal-main-image-container {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-main-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: grab;
+    transition: transform 0.1s ease;
+    transform-origin: center center;
+    user-select: none;
+    margin: auto;
+}
+
+.modal-main-image.grabbing {
+    cursor: grabbing;
+}
+
+.modal-main-image.zoomed {
+    cursor: grab;
+}
+
+/* Indicador de que se puede hacer scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    z-index: 100;
+}
+
+.scroll-indicator.show {
+    display: flex;
+}
+
+.scroll-indicator i {
+    font-size: 0.9rem;
+}
+
+/* Controles de zoom mejorados */
+.zoom-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 8px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.zoom-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.zoom-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.zoom-level {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Controles de navegación */
+.nav-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.nav-btn {
+    background-color: rgba(52, 152, 219, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    pointer-events: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+    background-color: rgba(41, 128, 185, 0.9);
+    transform: scale(1.1);
+}
+
+.nav-btn:disabled {
+    background-color: rgba(149, 165, 166, 0.5);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Galería de miniaturas */
+.gallery-section {
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+.gallery-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 3px solid transparent;
+    flex-shrink: 0;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail.active {
+    border-color: #3498db;
+    box-shadow: 0 5px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Indicador de carga */
+.image-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.9);
+    z-index: 50;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(52, 152, 219, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Ocultar los modales originales */
+.modalmask {
+    display: none;
 }
 
 /* Footer */
@@ -336,40 +920,125 @@ h1 {
     max-width: 100%;
 }
 
+/* Estilos para scrollbar personalizado */
+.modal-main-image-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.modal-main-image-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.modal-main-image-wrapper::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+.modal-main-image-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+.thumbnail-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.thumbnail-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.thumbnail-gallery::-webkit-scrollbar-thumb {
+    background: #95a5a6;
+    border-radius: 5px;
+}
+
+.thumbnail-gallery::-webkit-scrollbar-thumb:hover {
+    background: #7f8c8d;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .galeria {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 15px;
+        gap: 25px;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-bottom: 30px;
+    }
+    
+    .imagen {
+        height: 180px;
+    }
+
+    .modal-gallery-container {
+        width: 95%;
+        max-height: 88vh;
+    }
+    
+    .modal-main-image-wrapper {
+        min-height: 300px;
+        height: 55vh;
+    }
+    
+    .zoom-controls {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px 6px;
+    }
+    
+    .zoom-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+    
+    .thumbnail {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .gallery-title {
+        font-size: 1.1rem;
     }
 
     .modalbox {
         width: 95%;
         padding: 15px;
         max-width: 95%;
+        margin: 20px auto;
     }
 
     .resize,
     .modalmask:target .resize {
         width: 95%;
-        max-height: 95vh;
+        max-height: 92vh;
     }
 
     .close {
         line-height: 25px;
-        width: 25px;
-        height: 25px;
+        width: 28px;
+        height: 28px;
         font-size: 16px;
     }
 
     .modalbox.zoomed {
-        transform: scale(1.8) !important;
-        width: 90vw;
+        transform: scale(1.5) !important;
+        width: 92vw;
     }
 }
 
 @media (max-width: 576px) {
     .galeria {
+        gap: 20px;
+        padding: 15px;
         grid-template-columns: 1fr;
     }
 
@@ -381,8 +1050,8 @@ h1 {
         height: 25px;
     }
 
-    .imagen-container {
-        aspect-ratio: 16/9;
+    .imagen {
+        height: 160px;
     }
 
     .pie-imagen h3 {
@@ -392,13 +1061,56 @@ h1 {
     .pie-imagen p {
         font-size: 0.8rem;
     }
+
+    .modal-gallery-header {
+        padding: 10px 15px;
+    }
+    
+    .modal-gallery-title {
+        font-size: 1.1rem;
+    }
+    
+    .modal-gallery-body {
+        padding: 15px;
+    }
+    
+    .modal-main-image-wrapper {
+        min-height: 250px;
+        height: 45vh;
+    }
+    
+    .nav-controls {
+        padding: 0 10px;
+    }
+    
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .modal-gallery-container {
+        max-height: 90vh;
+    }
+
+    .modalbox {
+        margin: 15px auto;
+        padding: 12px;
+        max-height: 90vh;
+    }
+
+    .resize,
+    .modalmask:target .resize {
+        max-height: 90vh;
+    }
 }
 
-/* Dispositivos muy pequeños */
 @media (max-width: 400px) {
     body {
         padding-left: 10px;
         padding-right: 10px;
+        padding-top: 160px; /* Ajuste para dispositivos muy pequeños */
+        padding-bottom: 70px; /* MODIFICADO: Espacio inferior ajustado para pantallas muy pequeñas */
     }
 
     .header-title {
@@ -409,11 +1121,25 @@ h1 {
         height: 60px;
     }
 
-    body {
-        padding-top: 60px;
-    }
-
     .logo-img {
         max-height: 40px;
+    }
+
+    .modalbox {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .close {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+        right: 5px;
+        top: 5px;
+    }
+
+    .imagen {
+        height: 140px;
     }
 }

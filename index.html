@@ -4,18 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Actividades Contabilidad-Sistemas</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts - Oswald -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+    <video class="video-fondo" autoplay muted loop playsinline>
+        <source src="imagen/halloween-hands-of-terror-live-wallpaper.mp4" type="video/mp4">
+    </video>
 
-    <header class="custom-header">
-        <div class="lighting-effect"></div>
+    <!-- ============================================================ -->
+    <!-- NOTA FIJA MÁS ANCHA (NO CUBRE LOS CUADROS)                   -->
+    <!-- ============================================================ -->
+    <!--<div class="fixed-note">
+        <div class="note-header">
+            <span class="note-icon">📋</span>
+            <span class="note-label">NOTA IMPORTANTE</span>
+        </div>
+        <div class="note-body">
+            Por motivos de retardos y llamadas de atención los días 
+            <span class="highlight">3 al 12</span> saca la basura y cierra 
+            <span class="highlight-name">A QUIENES LES CORRESPONDE ESE DIA</span> -del 
+            <span class="highlight">13 al 31</span> saca la basura y cierra
+            <span class="highlight-name">HITOSHI</span> de igual modo se informa que estarán a cargo de realizar las labores finales del día del rol de actividades.
+            <span class="highlight-name"></span>los sabados quien le toque venir saca la basura y se encarga del rol.
+        </div>
+        <div class="note-footer">
+            <span class="note-date">📅 Vigencia: Agosto 2026</span>
+        </div>-->
+    </div>
+      <header class="custom-header">
+        <div class="lighting-effect"></div>       
         <div class="container-fluid h-100">
             <div class="row h-100 align-items-center">
                 <!-- Logo - columna izquierda -->
@@ -28,83 +50,142 @@
                         ACTIVIDADES CONTABILIDAD-SISTEMAS
                     </div>
                 </div>
-
                 <!-- Espacio vacío para alinear -->
                 <div class="col-4 col-md-2"></div>
             </div>
         </div>
+
     </header>
+    
     <main class="container mt-4">
         <div class="row">
             <div class="col-12">
-
                 <div class="galeria">
-                    <!-- Imagen 1 -->
-                    <div class="imagen-container">
-                        <img src="imagen/NOVIEMBRE IEPS.png" alt="Imagen 1" class="imagen">
+                    <div class="imagen-container" data-modal-id="12">
+                        <img src="imagen/Calendario Mayo 2025 Floral Rosa.png" alt="Imagen 12" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal1">IEPS DIARIOS</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">RESPALDO SERVIDOR NOMINAS</a></LI>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!-- Imagen 1 -->
+                    <div class="imagen-container" data-modal-id="1">
+                        <img src="imagen/ABRILIEPS.png" alt="Imagen 1" class="imagen">
+                        <div class="pie-imagen">
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">IEPS DIARIOS</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
 
                     <!-- Imagen 2 -->
-                    <div class="imagen-container">
+                    <div class="imagen-container" data-modal-id="2">
                         <img src="imagen/TXT1.png" alt="Imagen 2" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal2">TXT</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">TXT</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
 
                     <!-- Imagen 3 -->
-                    <div class="imagen-container">
-                        <img src="imagen/ROLL_NOVIEMBRE.png" alt="Imagen 3" class="imagen">
+                    <div class="imagen-container" data-modal-id="3">
+                        <img src="imagen/rol.png" alt="Imagen 3" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal3">ROLL DE ACTIVIDADES</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">ROLL DE ACTIVIDADES</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
 
                     <!-- Imagen 4 -->
-                    <div class="imagen-container">
+                    <div class="imagen-container" data-modal-id="4">
                         <img src="imagen/IEPS_SEMANAL1.png" alt="Imagen 4" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal4">IEPS SEMANALES</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">IEPS SEMANALES</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
-                    <div class="imagen-container">
-                        <img src="imagen/ACTUALIZACION_UNITY1.png" alt="Imagen 5" class="imagen">
+                    <div class="imagen-container" data-modal-id="5">
+                        <img src="imagen/ACTUALIZACION_SACI1.png" alt="Imagen 5" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal5">ACTUALIZACION XML REPORTES</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">ACTUALIZACION XML REPORTES</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
-                    <div class="imagen-container">
-                        <img src="imagen/cierre_sesiones.png" alt="Imagen 6" class="imagen">
+                    <div class="imagen-container" data-modal-id="6">
+                        <img src="imagen/sesiones.png" alt="Imagen 6" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal6">CERRAR SESIONES SERVIDOR</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">CERRAR SESIONES SERVIDOR</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
-                    <div>
-                    </div>
-                    <div class="imagen-container">
+                    <div class="imagen-container" data-modal-id="8">
                         <img src="imagen/GENERAL.png" alt="Imagen 8" class="imagen">
                         <div class="pie-imagen">
-                            <LI><a href="#modal8">CORREOS FISCAL JSON</a></LI>
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">CORREOS FISCAL JSON</a></LI>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="imagen-container" data-modal-id="7">
+                        <img src="imagen/ACTIVIDADES_SOPORTE_2025.png" alt="Imagen 7" class="imagen">
+                        <div class="pie-imagen">
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">ACTIVIDADES SOPORTE</a></LI>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="imagen-container" data-modal-id="9">
+                        <img src="imagen/1.png" alt="Imagen 9" class="imagen">
+                        <div class="pie-imagen">
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">ACTIVIDADES CONTABILIDAD-SISTEMAS</a></LI>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="imagen-container" data-modal-id="10">
+                        <img src="imagen/calendario_cumpleaños.png" alt="Imagen 10" class="imagen">
+                        <div class="pie-imagen">
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">CUMPLEAÑOS</a></LI>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="imagen-container" data-modal-id="11">
+                        <img src="imagen/CalendarioLiquidaciones_2026.png" alt="Imagen 11" class="imagen">
+                        <div class="pie-imagen">
+                            <LI><a href="javascript:void(0)" class="open-gallery-modal">LIQUIDACIONES</a></LI>
                             <h3></h3>
                             <p></p>
                         </div>
                     </div>
 
+                    <!-- Mantener los modales originales (ahora ocultos) -->
+                    <div id="modal11" class="modalmask">
+                        <div class="modalbox resize">
+                            <a href="#close" title="Close" class="close"></a>
+                            <img src="imagen/CalendarioLiquidaciones_2026.png" alt="Imagen 11" class="imagen">
+                        </div>
+                    <div id="modal10" class="modalmask">
+                        <div class="modalbox resize">
+                            <a href="#close" title="Close" class="close"></a>
+                            <img src="imagen/calendario_cumpleaños.png" alt="Imagen 10" class="imagen">
+                        </div>
+                    <div id="modal9" class="modalmask">
+                        <div class="modalbox resize">
+                            <a href="#close" title="Close" class="close"></a>
+                            <img src="imagen/1.png" alt="Imagen 9" class="imagen">
+                        </div>
+                    <div id="modal7" class="modalmask">
+                        <div class="modalbox resize">
+                            <a href="#close" title="Close" class="close"></a>
+                            <img src="imagen/ACTIVIDADES_SOPORTE_2.png" alt="Imagen 7" class="imagen">
+                        </div>
                     <div id="modal8" class="modalmask">
                         <div class="modalbox resize">
                             <a href="#close" title="Close" class="close"></a>
@@ -120,13 +201,13 @@
                     <div id="modal6" class="modalmask">
                         <div class="modalbox resize">
                             <a href="#close" title="Close" class="close"></a>
-                            <img src="imagen/cierre_sesiones.png" alt="Imagen 6" class="imagen">
+                            <img src="imagen/sesiones.png" alt="Imagen 6" class="imagen">
                         </div>
                     </div>
                     <div id="modal5" class="modalmask">
                         <div class="modalbox resize">
                             <a href="#close" title="Close" class="close"></a>
-                            <img src="imagen/ACTUALIZACION_UNITY1.png" alt="Imagen 5" class="imagen">
+                            <img src="imagen/ACTUALIZACION_SACI1.png" alt="Imagen 5" class="imagen">
                         </div>
                     </div>
                     <div id="modal4" class="modalmask">
@@ -138,13 +219,19 @@
                     <div id="modal3" class="modalmask">
                         <div class="modalbox resize">
                             <a href="#close" title="Close" class="close"></a>
-                            <img src="imagen/ROLL_NOVIEMBRE.png" alt="Imagen 3" class="imagen">
+                            <img src="imagen/rol.png" alt="Imagen 3" class="imagen">
                         </div>
                     </div>
                     <div id="modal1" class="modalmask">
                         <div class="modalbox movedown resize">
                             <a href="#close" title="Close" class="close"></a>
-                            <img src="imagen/NOVIEMBRE IEPS.png" alt="Imagen 1" class="imagen">
+                            <img src="imagen/ABRILIEPS.png" alt="Imagen 1" class="imagen">
+                        </div>
+                    </div>
+                    <div id="modal1" class="modalmask">
+                        <div class="modalbox movedown resize">
+                            <a href="#close" title="Close" class="close"></a>
+                            <img src="imagen/Calendario Mayo 2025 Floral Rosa.png" alt="Imagen 12" class="imagen">
                         </div>
                     </div>
 
@@ -152,9 +239,55 @@
                 </div>
             </div>
         </div>
-
     </main>
 
+    <!-- Nuevo Modal para Galería con Desplazamiento -->
+    <div class="modal-gallery-overlay" id="galleryModal">
+        <div class="modal-gallery-container">
+            <div class="modal-gallery-header">
+                <h2 class="modal-gallery-title" id="galleryModalTitle">IEPS DIARIOS</h2>
+                <button class="modal-gallery-close" id="galleryModalClose">&times;</button>
+            </div>
+            <div class="modal-gallery-body">
+                <!-- Indicador de scroll -->
+                <div class="scroll-indicator" id="scrollIndicator">
+                    <i>↕</i> Desplázate para ver más
+                </div>
+                
+                <!-- Controles de navegación entre imágenes -->
+                <div class="nav-controls">
+                    <button class="nav-btn" id="prevImageBtn" disabled>&lt;</button>
+                    <button class="nav-btn" id="nextImageBtn" disabled>&gt;</button>
+                </div>
+                
+                <!-- Contenedor principal con scroll -->
+                <div class="modal-main-image-wrapper" id="imageWrapper">
+                    <div class="modal-main-image-container" id="imageContainer">
+                        <div class="image-loading" id="galleryImageLoading">
+                            <div class="spinner"></div>
+                        </div>
+                        <img id="galleryMainImage" class="modal-main-image" src="" alt="Imagen principal">
+                    </div>
+                </div>
+                
+                <!-- Controles de zoom -->
+                <div class="zoom-controls">
+                    <button class="zoom-btn" id="galleryZoomIn" title="Zoom In">+</button>
+                    <button class="zoom-btn" id="galleryZoomOut" title="Zoom Out">-</button>
+                    <button class="zoom-btn" id="galleryResetZoom" title="Restablecer Zoom">⟲</button>
+                    <div class="zoom-level" id="zoomLevel">100%</div>
+                </div>
+                
+                <!-- Galería de miniaturas -->
+                <div class="gallery-section">
+                    <h3 class="gallery-title">Imágenes relacionadas</h3>
+                    <div class="thumbnail-gallery" id="galleryThumbnailGallery">
+                        <!-- Las miniaturas se cargarán aquí dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -164,6 +297,507 @@
         <img class="footer-logo" src="imagen/image004.png" alt="logoFullgas">
     </footer>
 
-</body>
+    <script>
+        // Datos para cada modal con imágenes relacionadas
+        const modalGalleryData = {
+            1: {
+                title: "IEPS DIARIOS",
+                mainImage: "imagen/ABRILIEPS.png",
+                images: [
+                    "imagen/ABRILIEPS.png"
+                ]
+            },
+            2: {
+                title: "TXT",
+                mainImage: "imagen/TXT1.png",
+                images: [
+                    "imagen/TXT1.png"
+                ]
+            },
+            3: {
+                title: "ROLL DE ACTIVIDADES",
+                mainImage: "imagen/rol.png",
+                images: [
+                    "imagen/rol.png"
+                ]
+            },
+            4: {
+                title: "IEPS SEMANALES",
+                mainImage: "imagen/IEPS_SEMANAL1.png",
+                images: [
+                    "imagen/IEPS_SEMANAL1.png"
+                ]
+            },
+            5: {
+                title: "ACTUALIZACION XML REPORTES",
+                mainImage: "imagen/ACTUALIZACION_SACI1.png",
+                images: [
+                    "imagen/ACTUALIZACION_SACI1.png"
+                ]
+            },
+            6: {
+                title: "CERRAR SESIONES SERVIDOR",
+                mainImage: "imagen/sesiones.png",
+                images: [
+                    "imagen/sesiones.png"
+                ]
+            },
+            7: {
+                title: "ACTIVIDADES SOPORTE",
+                mainImage: "imagen/ACTIVIDADES_SOPORTE_2025.png",
+                images: [
+                    "imagen/ACTIVIDADES_SOPORTE_2025.png",
+                    "imagen/ACTIVIDADES_SOPORTE_2.png"
+                ]
+            },
+             9: {
+                title: "ACTIVIDADES CONTABILIDAD-SISTEMAS",
+                mainImage: "imagen/1.png",
+                images: [
+                    "imagen/1.png",
+                    "imagen/2.png",
+                    "imagen/3.png"
+                ]
+            },
+            8: {
+                title: "CORREOS FISCAL JSON",
+                mainImage: "imagen/GENERAL.png",
+                images: [
+                    "imagen/GENERAL.png"
+                ]
+            },
+            10: {
+                title: "CUMPLEAÑOS",
+                mainImage: "imagen/calendario_cumpleaños.png",
+                images: [
+                    "imagen/calendario_cumpleaños.png"
+                ]
+            },
+            11: {
+                title: "LIQUIDACIONES",
+                mainImage: "imagen/CalendarioLiquidaciones_2026.png",
+                images: [
+                    "imagen/CalendarioLiquidaciones_2026.png"
+                ]
+            },
+             12: {
+                title: "RESPALDO SERVIDOR NOMINAS",
+                mainImage: "imagen/Calendario Mayo 2025 Floral Rosa.png",
+                images: [
+                    "imagen/Calendario Mayo 2025 Floral Rosa.png"
+                ]
+            }
 
-</html>|
+        };
+
+        // Referencias a elementos del DOM
+        const galleryModal = document.getElementById('galleryModal');
+        const galleryModalTitle = document.getElementById('galleryModalTitle');
+        const galleryMainImage = document.getElementById('galleryMainImage');
+        const galleryThumbnailGallery = document.getElementById('galleryThumbnailGallery');
+        const galleryModalClose = document.getElementById('galleryModalClose');
+        const galleryZoomInBtn = document.getElementById('galleryZoomIn');
+        const galleryZoomOutBtn = document.getElementById('galleryZoomOut');
+        const galleryResetZoomBtn = document.getElementById('galleryResetZoom');
+        const galleryImageLoading = document.getElementById('galleryImageLoading');
+        const imageWrapper = document.getElementById('imageWrapper');
+        const imageContainer = document.getElementById('imageContainer');
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        const zoomLevel = document.getElementById('zoomLevel');
+        const prevImageBtn = document.getElementById('prevImageBtn');
+        const nextImageBtn = document.getElementById('nextImageBtn');
+        
+        // Variables para control del estado
+        let currentScale = 1;
+        const zoomStep = 0.25;
+        const maxZoom = 4;
+        const minZoom = 0.5;
+        let currentModalId = 1;
+        let currentImageIndex = 0;
+        let isDragging = false;
+        let startX, startY;
+        let scrollLeft, scrollTop;
+        
+        // Variables para arrastre (pan)
+        let isPanning = false;
+        let panStartX = 0;
+        let panStartY = 0;
+        
+        // Abrir modal cuando se hace clic en una imagen o enlace
+        document.querySelectorAll('.imagen-container, .open-gallery-modal').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Obtener el ID del modal
+                let modalId;
+                if (this.classList.contains('imagen-container')) {
+                    modalId = this.getAttribute('data-modal-id');
+                } else {
+                    const container = this.closest('.imagen-container');
+                    modalId = container ? container.getAttribute('data-modal-id') : '1';
+                }
+                
+                // Cargar datos del modal
+                loadGalleryModalData(modalId);
+                
+                // Mostrar modal
+                galleryModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Cerrar modal
+        galleryModalClose.addEventListener('click', closeGalleryModal);
+        
+        // Cerrar modal al hacer clic fuera del contenido
+        galleryModal.addEventListener('click', function(e) {
+            if (e.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+        
+        // Cerrar modal con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
+                closeGalleryModal();
+            }
+            
+            // Navegación con teclado
+            if (galleryModal.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    navigateToPrevImage();
+                } else if (e.key === 'ArrowRight') {
+                    navigateToNextImage();
+                } else if (e.key === '+' || e.key === '=') {
+                    e.preventDefault();
+                    zoomIn();
+                } else if (e.key === '-' || e.key === '_') {
+                    e.preventDefault();
+                    zoomOut();
+                } else if (e.key === '0') {
+                    e.preventDefault();
+                    resetZoom();
+                }
+            }
+        });
+        
+        // Funciones de zoom
+        galleryZoomInBtn.addEventListener('click', zoomIn);
+        galleryZoomOutBtn.addEventListener('click', zoomOut);
+        galleryResetZoomBtn.addEventListener('click', resetZoom);
+        
+        // Navegación entre imágenes
+        prevImageBtn.addEventListener('click', navigateToPrevImage);
+        nextImageBtn.addEventListener('click', navigateToNextImage);
+        
+        // Zoom con la rueda del mouse sobre la imagen
+        galleryMainImage.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            
+            if (e.ctrlKey || e.metaKey) {
+                // Zoom con Ctrl + Rueda
+                if (e.deltaY < 0 && currentScale < maxZoom) {
+                    zoomIn();
+                } else if (e.deltaY > 0 && currentScale > minZoom) {
+                    zoomOut();
+                }
+            } else {
+                // Scroll normal
+                imageWrapper.scrollTop += e.deltaY;
+                imageWrapper.scrollLeft += e.deltaX;
+            }
+        });
+        
+        // Arrastre (pan) de la imagen cuando está con zoom
+        galleryMainImage.addEventListener('mousedown', startPan);
+        galleryMainImage.addEventListener('touchstart', startPanTouch);
+        
+        galleryMainImage.addEventListener('mouseup', endPan);
+        galleryMainImage.addEventListener('touchend', endPan);
+        
+        galleryMainImage.addEventListener('mousemove', doPan);
+        galleryMainImage.addEventListener('touchmove', doPanTouch);
+        
+        // Función para cargar datos del modal de galería
+        function loadGalleryModalData(modalId) {
+            currentModalId = modalId;
+            const data = modalGalleryData[modalId];
+            if (!data) return;
+            
+            // Establecer título
+            galleryModalTitle.textContent = data.title;
+            
+            // Resetear índice de imagen actual
+            currentImageIndex = 0;
+            
+            // Cargar primera imagen
+            loadImageAtIndex(0, data);
+            
+            // Crear galería de miniaturas
+            createThumbnailGallery(data);
+            
+            // Actualizar controles de navegación
+            updateNavControls(data.images.length);
+        }
+        
+        // Función para cargar una imagen específica
+        function loadImageAtIndex(index, data) {
+            if (!data) data = modalGalleryData[currentModalId];
+            if (!data || index < 0 || index >= data.images.length) return;
+            
+            currentImageIndex = index;
+            
+            // Mostrar indicador de carga
+            galleryImageLoading.style.display = 'flex';
+            galleryMainImage.style.display = 'none';
+            
+            // Cargar imagen
+            galleryMainImage.src = data.images[index];
+            galleryMainImage.alt = `${data.title} - Imagen ${index + 1}`;
+            
+            // Cuando la imagen se carga
+            galleryMainImage.onload = function() {
+                galleryImageLoading.style.display = 'none';
+                galleryMainImage.style.display = 'block';
+                
+                // Resetear zoom y posición
+                resetZoomAndPosition();
+                
+                // Actualizar miniaturas activas
+                updateActiveThumbnail();
+                
+                // Actualizar controles de navegación
+                updateNavControls(data.images.length);
+                
+            };
+            
+            galleryMainImage.onerror = function() {
+                galleryImageLoading.style.display = 'none';
+                galleryMainImage.style.display = 'block';
+                galleryMainImage.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect width="400" height="300" fill="%23f0f0f0"/><text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="20" fill="%23999">Imagen no disponible</text></svg>';
+                resetZoomAndPosition();
+            };
+        }
+        
+        // Función para crear galería de miniaturas
+        function createThumbnailGallery(data) {
+            galleryThumbnailGallery.innerHTML = '';
+            
+            // Si solo hay una imagen, ocultar la sección de miniaturas
+            if (data.images.length <= 1) {
+                document.querySelector('.gallery-section').style.display = 'none';
+                return;
+            }
+            
+            document.querySelector('.gallery-section').style.display = 'block';
+            
+            data.images.forEach((imageSrc, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = imageSrc;
+                thumbnail.alt = `${data.title} - Imagen ${index + 1}`;
+                thumbnail.className = 'thumbnail';
+                
+                if (index === currentImageIndex) {
+                    thumbnail.classList.add('active');
+                }
+                
+                // Al hacer clic en una miniatura, cambiar la imagen principal
+                thumbnail.addEventListener('click', function() {
+                    loadImageAtIndex(index, data);
+                });
+                
+                galleryThumbnailGallery.appendChild(thumbnail);
+            });
+        }
+        
+        // Función para actualizar la miniatura activa
+        function updateActiveThumbnail() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumb, index) => {
+                if (index === currentImageIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+        
+        // Función para actualizar controles de navegación
+        function updateNavControls(totalImages) {
+            prevImageBtn.disabled = currentImageIndex <= 0;
+            nextImageBtn.disabled = currentImageIndex >= totalImages - 1;
+        }
+        
+        // Navegación a imagen anterior
+        function navigateToPrevImage() {
+            const data = modalGalleryData[currentModalId];
+            if (!data || currentImageIndex <= 0) return;
+            
+            loadImageAtIndex(currentImageIndex - 1, data);
+        }
+        
+        // Navegación a imagen siguiente
+        function navigateToNextImage() {
+            const data = modalGalleryData[currentModalId];
+            if (!data || currentImageIndex >= data.images.length - 1) return;
+            
+            loadImageAtIndex(currentImageIndex + 1, data);
+        }
+        
+        // Funciones de zoom
+        function zoomIn() {
+            if (currentScale < maxZoom) {
+                currentScale += zoomStep;
+                applyZoom();
+            }
+        }
+        
+        function zoomOut() {
+            if (currentScale > minZoom) {
+                currentScale -= zoomStep;
+                applyZoom();
+            }
+        }
+        
+        function resetZoom() {
+            currentScale = 1;
+            applyZoom();
+            
+            // Centrar la imagen después de resetear el zoom
+            centerImage();
+        }
+        
+        // Aplicar zoom y actualizar UI
+        function applyZoom() {
+            galleryMainImage.style.transform = `scale(${currentScale})`;
+            
+            // Actualizar nivel de zoom en UI
+            zoomLevel.textContent = `${Math.round(currentScale * 100)}%`;
+            
+            // Mostrar/ocultar indicador de scroll según sea necesario
+            updateScrollIndicator();
+            
+            // Cambiar cursor según el nivel de zoom
+            if (currentScale > 1) {
+                galleryMainImage.classList.add('zoomed');
+                scrollIndicator.classList.add('show');
+            } else {
+                galleryMainImage.classList.remove('zoomed');
+                scrollIndicator.classList.remove('show');
+            }
+        }
+        
+        // Actualizar indicador de scroll
+        function updateScrollIndicator() {
+            const imageWidth = galleryMainImage.naturalWidth * currentScale;
+            const imageHeight = galleryMainImage.naturalHeight * currentScale;
+            const containerWidth = imageWrapper.clientWidth;
+            const containerHeight = imageWrapper.clientHeight;
+            
+             if (imageWidth > containerWidth || imageHeight > containerHeight) {
+                scrollIndicator.classList.add('show');
+            } else {
+                scrollIndicator.classList.remove('show');
+            }
+        }
+        
+        // Centrar la imagen en el contenedor
+        function centerImage() {
+            // Resetear scroll del contenedor
+            imageWrapper.scrollLeft = (imageContainer.scrollWidth - imageWrapper.clientWidth) / 2;
+            imageWrapper.scrollTop = (imageContainer.scrollHeight - imageWrapper.clientHeight) / 2;
+        }
+        
+        // Resetear zoom y posición
+        function resetZoomAndPosition() {
+            resetZoom();
+            centerImage();
+        }
+        
+        // Funciones para arrastre (pan)
+        function startPan(e) {
+            if (currentScale > 1) {
+                isPanning = true;
+                galleryMainImage.classList.add('grabbing');
+                panStartX = e.clientX - galleryMainImage.offsetLeft;
+                panStartY = e.clientY - galleryMainImage.offsetTop;
+                e.preventDefault();
+            }
+        }
+        
+        function startPanTouch(e) {
+            if (currentScale > 1 && e.touches.length === 1) {
+                isPanning = true;
+                galleryMainImage.classList.add('grabbing');
+                panStartX = e.touches[0].clientX - galleryMainImage.offsetLeft;
+                panStartY = e.touches[0].clientY - galleryMainImage.offsetTop;
+                e.preventDefault();
+            }
+        }
+        
+        function doPan(e) {
+            if (!isPanning) return;
+            
+            e.preventDefault();
+            const x = e.clientX - panStartX;
+            const y = e.clientY - panStartY;
+            
+            // Mover el contenedor de scroll en lugar de la imagen directamente
+            imageWrapper.scrollLeft -= (e.movementX || 0) * currentScale;
+            imageWrapper.scrollTop -= (e.movementY || 0) * currentScale;
+        }
+        
+        function doPanTouch(e) {
+            if (!isPanning || e.touches.length !== 1) return;
+            
+            e.preventDefault();
+            const touch = e.touches[0];
+            const x = touch.clientX - panStartX;
+            const y = touch.clientY - panStartY;
+            
+            // Para touch, necesitamos un enfoque diferente
+            // Simplemente prevenimos el comportamiento por defecto
+        }
+        
+        function endPan() {
+            isPanning = false;
+            galleryMainImage.classList.remove('grabbing');
+        }
+        
+        // Función para cerrar el modal
+        function closeGalleryModal() {
+            galleryModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            resetZoomAndPosition();
+        }
+        
+        // Precargar imágenes para mejor experiencia
+        window.addEventListener('load', function() {
+            // Precargar las imágenes principales
+            Object.values(modalGalleryData).forEach(data => {
+                data.images.forEach(imageSrc => {
+                    const img = new Image();
+                    img.src = imageSrc;
+                });
+            });
+        });
+        
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Actualizar enlaces para abrir el modal
+            const links = document.querySelectorAll('.pie-imagen a');
+            links.forEach(link => {
+                link.href = "javascript:void(0)";
+                link.classList.add('open-gallery-modal');
+            });
+            
+            // Ajustar el contenedor de imágenes cuando cambia el tamaño de la ventana
+            window.addEventListener('resize', function() {
+                if (galleryModal.classList.contains('active')) {
+                    updateScrollIndicator();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
